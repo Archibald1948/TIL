@@ -74,8 +74,6 @@ const useTodoStore = create((set) => ({
 useTodoStore((state) => state.addTodo('Learn Zustand'))
 ```
 
----
-
 # 2. 설치 및 기본 설정
 
 ## 설치
@@ -112,8 +110,6 @@ function Counter() {
   )
 }
 ```
-
----
 
 # 3. 상태와 액션
 
@@ -160,8 +156,6 @@ function MyComponent() {
   return <div>{count}</div>
 }
 ```
-
----
 
 # 4. 실전 예제
 
@@ -326,8 +320,6 @@ function LoginForm() {
 }
 ```
 
----
-
 # 5. 여러 스토어 연결
 
 ## 독립적 스토어
@@ -387,8 +379,6 @@ function Counter() {
   return <button onClick={handleClick}>+1</button>
 }
 ```
-
----
 
 # 6. Middleware와 Plugins
 
@@ -483,8 +473,6 @@ const useStore2 = create(
 )
 ```
 
----
-
 # 7. Immer 통합
 
 ## 불변성 간단하게 처리
@@ -531,8 +519,6 @@ const useTodoStore = create<any>(
 // 사용은 동일
 ```
 
----
-
 # 8. 성능 최적화
 
 ## 선택적 구독
@@ -575,8 +561,6 @@ function MyComponent() {
   return <div>{count} - {name}</div>
 }
 ```
-
----
 
 # 9. 팀 협업 Best Practices
 
@@ -636,8 +620,6 @@ src/
 │   ├── TodoList.tsx
 │   └── Navbar.tsx
 ```
-
----
 
 # 10. 자주 묻는 질문
 
@@ -709,8 +691,6 @@ const useStore = create((set) => ({
 }))
 ```
 
----
-
 # 11. Zustand vs 다른 라이브러리
 
 ```
@@ -733,8 +713,6 @@ MobX:
 → 대부분의 경우 Zustand가 최고!
 ```
 
----
-
 # 12. 체크리스트
 
 Zustand 적용:
@@ -751,8 +729,6 @@ Zustand 적용:
 [ ] 성능 최적화
 ```
 
----
-
 # 결론
 
 Zustand는:
@@ -764,3 +740,8 @@ Zustand는:
 ✅ TypeScript 지원
 
 **간단하고 효율적인 상태 관리가 필요하면 Zustand를 선택하세요!**
+
+## 참고 링크
+
+- [Zustand 공식 문서](https://zustand.docs.pmnd.rs)
+- [Zustand GitHub](https://github.com/pmndrs/zustand)
