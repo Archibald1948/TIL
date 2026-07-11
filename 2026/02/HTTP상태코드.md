@@ -67,8 +67,6 @@
 
 이 가이드에서는 HTTP 상태 코드의 모든 것을 다룹니다. 각 코드가 뭔지, 왜 발생하는지, 어떻게 해결하는지를 실제 코드와 함께 배울 것입니다.
 
----
-
 # 1XX (정보 응답) - 요청이 진행 중
 
 1XX 상태 코드는 **요청을 받았고 처리 중**임을 나타냅니다. 임시 응답으로, 실제 응답이 아닙니다.
@@ -161,8 +159,6 @@ app.post('/upload', (req, res) => {
   res.json({ success: true });
 });
 ```
-
----
 
 ## 101 Switching Protocols (프로토콜 전환)
 
@@ -283,8 +279,6 @@ class WebSocketManager {
 }
 ```
 
----
-
 # 2XX (성공) - 요청 성공적 처리
 
 2XX 상태 코드는 요청이 성공적으로 처리되었음을 의미합니다.
@@ -356,8 +350,6 @@ async function getUsers() {
 getUsers();
 ```
 
----
-
 ## 201 Created (생성됨)
 
 ### 의미
@@ -426,8 +418,6 @@ async function createUser(userData) {
   }
 }
 ```
-
----
 
 ## 202 Accepted (수락됨)
 
@@ -546,8 +536,6 @@ async function pollVideoStatus(statusUrl) {
 }
 ```
 
----
-
 ## 204 No Content (내용 없음)
 
 ### 의미
@@ -615,8 +603,6 @@ async function deleteUser(userId) {
   }
 }
 ```
-
----
 
 ## 206 Partial Content (부분 내용)
 
@@ -742,8 +728,6 @@ async function streamVideo(videoUrl, videoElement) {
 //   Content-Range: bytes 0-1048575/5242880
 ```
 
----
-
 # 3XX (리다이렉트) - 추가 조치 필요
 
 3XX 상태 코드는 클라이언트가 추가 조치를 해야 함을 의미합니다. 주로 새 URL로 이동해야 함을 나타냅니다.
@@ -790,8 +774,6 @@ app.get('/products', (req, res) => {
 const response = await fetch('/old-url');
 console.log(response.url); // /new-url로 자동 따라감
 ```
-
----
 
 ## 302 Found (임시 이동)
 
@@ -840,8 +822,6 @@ app.get('/main-service', (req, res) => {
   res.redirect(302, '/maintenance-page');
 });
 ```
-
----
 
 ## 304 Not Modified (수정되지 않음)
 
@@ -942,8 +922,6 @@ Network 탭:
 - 네트워크 트래픽 감소 확인
 ```
 
----
-
 ## 307 Temporary Redirect (임시 리다이렉트)
 
 ### 의미
@@ -981,8 +959,6 @@ app.post('/form-confirmation', (req, res) => {
   res.json({ success: true, data });
 });
 ```
-
----
 
 # 4XX (클라이언트 에러) - 클라이언트의 요청이 잘못됨
 
@@ -1091,8 +1067,6 @@ curl -X POST http://localhost:3000/api/users \
 
 # 응답: 400 Bad Request
 ```
-
----
 
 ## 401 Unauthorized (인증 필요)
 
@@ -1263,8 +1237,6 @@ const profile = await api.getProfile();
 console.log(profile);
 ```
 
----
-
 ## 403 Forbidden (접근 금지)
 
 ### 의미
@@ -1324,8 +1296,6 @@ app.put('/api/posts/:id', authMiddleware, ownershipMiddleware, (req, res) => {
   res.json({ success: true });
 });
 ```
-
----
 
 ## 404 Not Found (찾을 수 없음)
 
@@ -1387,8 +1357,6 @@ async function getUser(userId) {
   }
 }
 ```
-
----
 
 ## 409 Conflict (충돌)
 
@@ -1482,8 +1450,6 @@ async function registerUser(email) {
   }
 }
 ```
-
----
 
 ## 429 Too Many Requests (너무 많은 요청)
 
@@ -1640,8 +1606,6 @@ api
   .catch((error) => console.error('최종 실패:', error));
 ```
 
----
-
 # 5XX (서버 에러) - 서버에 문제 발생
 
 5XX 상태 코드는 서버에서 요청을 처리하지 못했음을 의미합니다.
@@ -1770,8 +1734,6 @@ app.get('/api/users', async (req, res) => {
   }
 });
 ```
-
----
 
 ## 502 Bad Gateway (잘못된 게이트웨이)
 
@@ -1931,8 +1893,6 @@ app.get('/api/data', async (req, res) => {
 });
 ```
 
----
-
 ## 503 Service Unavailable (서비스 이용 불가)
 
 ### 의미
@@ -2048,8 +2008,6 @@ fetchWithRetry('/api/data')
   .catch((error) => console.error(error));
 ```
 
----
-
 ## 504 Gateway Timeout (게이트웨이 타임아웃)
 
 ### 의미
@@ -2136,8 +2094,6 @@ app.get('/api/slow-operation', async (req, res) => {
 - [ ] 부하 테스트 (429, 503)
 - [ ] 복구 시나리오 테스트
 
----
-
 # 결론
 
 HTTP 상태 코드를 이해하면:
@@ -2149,3 +2105,9 @@ HTTP 상태 코드를 이해하면:
 ✅ 프로덕션 문제 예방
 
 **각 상태 코드에 맞는 적절한 응답을 반환하고, 사용자에게 명확한 정보를 제공하는 것이 좋은 API의 특징입니다!**
+
+## 참고 링크
+
+- [MDN - HTTP 응답 상태 코드](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+- [MDN - HTTP 개요](https://developer.mozilla.org/en-US/docs/Web/HTTP)
+- [RFC 9110 - HTTP Semantics (Status Codes)](https://www.rfc-editor.org/rfc/rfc9110.html#name-status-codes)
