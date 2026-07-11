@@ -746,3 +746,9 @@ Prisma는:
 
 **지금 바로 Prisma를 시작하세요!**
 ```
+
+## 참고 링크
+
+- [Prisma 공식 사이트](https://www.prisma.io)
+- [Prisma 공식 문서](https://www.prisma.io/docs)
+- [Prisma GitHub 저장소](https://github.com/prisma/prisma)
