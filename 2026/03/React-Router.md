@@ -61,8 +61,6 @@ v6:
 - 중첩 라우트 쉬움
 ```
 
----
-
 # 2. 설치 및 기본 설정
 
 ## 설치
@@ -93,8 +91,6 @@ function App() {
 
 export default App
 ```
-
----
 
 # 3. 기본 라우팅
 
@@ -166,8 +162,6 @@ function Navigation() {
   )
 }
 ```
-
----
 
 # 4. 동적 라우트
 
@@ -265,8 +259,6 @@ function App() {
 }
 ```
 
----
-
 # 5. 중첩 라우트 (Nested Routes)
 
 ## 레이아웃과 함께 중첩
@@ -353,8 +345,6 @@ function App() {
 }
 ```
 
----
-
 # 6. 프로그래매틱 네비게이션
 
 ## useNavigate 훅
@@ -433,8 +423,6 @@ function ProductDetail() {
   )
 }
 ```
-
----
 
 # 7. 라우트 가드 (Protected Routes)
 
@@ -532,8 +520,6 @@ function App() {
 }
 ```
 
----
-
 # 8. 지연 로딩 (Lazy Loading)
 
 ## 동적 임포트
@@ -600,8 +586,6 @@ function App() {
   )
 }
 ```
-
----
 
 # 9. 라우트 설정 파일로 관리
 
@@ -670,8 +654,6 @@ function App() {
 
 export default App
 ```
-
----
 
 # 10. 실전 예제
 
@@ -755,8 +737,6 @@ function App() {
   )
 }
 ```
-
----
 
 # 11. 고급 기능
 
@@ -842,8 +822,6 @@ function App() {
 }
 ```
 
----
-
 # 12. 팀 협업 Best Practices
 
 ## 라우트 타입 정의
@@ -900,8 +878,6 @@ function Example() {
 }
 ```
 
----
-
 # 13. 자주 묻는 질문
 
 ## Q: Link vs navigate?
@@ -946,8 +922,6 @@ function GoBackButton() {
 }
 ```
 
----
-
 # 14. 체크리스트
 
 React Router 시작하기:
@@ -966,8 +940,6 @@ React Router 시작하기:
 [ ] 팀 협업 규칙 정의
 ```
 
----
-
 # 결론
 
 React Router는:
@@ -980,3 +952,9 @@ React Router는:
 ✅ 강력한 훅 API
 
 **React SPA 개발에는 React Router가 필수입니다!**
+
+## 참고 링크
+
+- [React Router 공식 사이트](https://reactrouter.com)
+- [React Router 공식 문서](https://reactrouter.com/home)
+- [React Router GitHub](https://github.com/remix-run/react-router)
