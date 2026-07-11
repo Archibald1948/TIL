@@ -625,3 +625,9 @@ Husky는 단순한 도구가 아니라, 팀의 코드 품질을 지키는 자동
 - 일관된 커밋 메시지로 히스토리 관리가 쉬워집니다
 
 특히 팀 프로젝트에서는 Husky 없이는 일관된 코드 품질을 유지하기 거의 불가능합니다. 지금 바로 도입해보세요!
+
+## 참고 링크
+
+- [Husky 공식 문서](https://typicode.github.io/husky)
+- [Husky GitHub](https://github.com/typicode/husky)
+- [lint-staged GitHub](https://github.com/lint-staged/lint-staged)
