@@ -58,8 +58,6 @@ Joi:
 - 무거운 번들
 ```
 
----
-
 # 2. 설치 및 기본 설정
 
 ## 설치
@@ -69,8 +67,6 @@ npm install zod
 ```
 
 의존성이 없어서 설치가 간단합니다.
-
----
 
 # 3. 기본 타입 검증
 
@@ -122,8 +118,6 @@ unionSchema.parse('hello'); // ✅ 성공
 unionSchema.parse(42); // ✅ 성공
 unionSchema.parse(true); // ❌ 에러
 ```
-
----
 
 # 4. 객체 검증
 
@@ -215,8 +209,6 @@ type User = z.infer<typeof userSchema>;
 // }
 ```
 
----
-
 # 5. 상세한 검증
 
 ## String 검증
@@ -307,8 +299,6 @@ uniqueTagsSchema.parse(['js', 'ts']); // ✅ 성공
 uniqueTagsSchema.parse(['js', 'js']); // ❌ 에러
 ```
 
----
-
 # 6. 커스텀 검증
 
 ## refine 사용
@@ -379,8 +369,6 @@ const userSchema = z
   });
 ```
 
----
-
 # 7. Transform 사용
 
 ## 데이터 변환
@@ -432,8 +420,6 @@ type User = z.infer<typeof userSchema>;
 //   email: string
 // }
 ```
-
----
 
 # 8. 에러 처리
 
@@ -522,8 +508,6 @@ if (result.success) {
   console.error('Invalid:', result.error.format());
 }
 ```
-
----
 
 # 9. 실전 예제
 
@@ -674,8 +658,6 @@ async function getAllUsers() {
 }
 ```
 
----
-
 # 10. React Hook Form과 통합
 
 ## React Hook Form + Zod
@@ -730,8 +712,6 @@ function LoginForm() {
   )
 }
 ```
-
----
 
 # 11. 고급 기능
 
@@ -809,8 +789,6 @@ type UsersPage = z.infer<typeof usersPageSchema>;
 // }
 ```
 
----
-
 # 12. 팀 협업 Best Practices
 
 ## 스키마 분리 및 관리
@@ -844,8 +822,6 @@ export * from './user';
 export * from './product';
 export * from './order';
 ```
-
----
 
 # 13. 자주 묻는 질문
 
@@ -908,8 +884,6 @@ schema3.parse(null); // ✅ 성공
 schema3.parse(undefined); // ✅ 성공
 ```
 
----
-
 # 14. 체크리스트
 
 Zod 도입하기:
@@ -927,8 +901,6 @@ Zod 도입하기:
 [ ] 팀 협업 규칙 정의
 ```
 
----
-
 # 결론
 
 Zod는:
@@ -941,3 +913,8 @@ Zod는:
 ✅ 뛰어난 에러 메시지
 
 **TypeScript 프로젝트에서 데이터 검증은 Zod로 시작하세요!**
+
+## 참고 링크
+
+- [Zod 공식 사이트](https://zod.dev)
+- [Zod GitHub](https://github.com/colinhacks/zod)
