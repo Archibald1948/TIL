@@ -1016,3 +1016,10 @@ Storybook은:
 - 복잡한 UI 컴포넌트
 
 **지금 바로 Storybook을 시작하세요!**
+
+## 참고 링크
+
+- [Storybook 공식 사이트](https://storybook.js.org/)
+- [Storybook 공식 문서](https://storybook.js.org/docs)
+- [Storybook GitHub 저장소](https://github.com/storybookjs/storybook)
+- [Intro to Storybook 튜토리얼](https://storybook.js.org/tutorials/intro-to-storybook/)
