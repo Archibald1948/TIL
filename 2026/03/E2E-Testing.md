@@ -18,8 +18,6 @@
 
 **E2E 테스트(End-to-End Test)** 는 사용자의 실제 행동을 자동으로 시뮬레이션해서 앱이 제대로 작동하는지 확인합니다.
 
----
-
 # 1. E2E 테스트란?
 
 ## 개념
@@ -72,8 +70,6 @@ E2E 테스트:
 - 예: 로그인 → 상품 검색 → 결제 → 완료
 ```
 
----
-
 # 2. E2E 테스트가 필요한 경우
 
 ## E2E 테스트를 작성해야 하는 경우
@@ -112,8 +108,6 @@ E2E 테스트:
 - 실험적 기능
 ```
 
----
-
 # 3. E2E 테스트 도구 비교
 
 ## 주요 도구
@@ -151,8 +145,6 @@ WebDriver:
 여러 브라우저  → Playwright
 대규모 기업    → Selenium
 ```
-
----
 
 # 4. 기본 E2E 테스트 작성 (Playwright)
 
@@ -244,8 +236,6 @@ test('상품 검색 및 구매', async ({ page }) => {
   await expect(page.locator('h1')).toContainText('결제')
 })
 ```
-
----
 
 # 5. 실전 예제
 
@@ -356,8 +346,6 @@ test('상품 필터링 및 정렬', async ({ page }) => {
 })
 ```
 
----
-
 # 6. 데이터 기반 테스트
 
 ## 여러 사례로 테스트
@@ -405,8 +393,6 @@ users.forEach(({ email, password, role }) => {
   })
 })
 ```
-
----
 
 # 7. 데이터베이스와 API 테스트
 
@@ -476,8 +462,6 @@ test('전체 사용자 플로우 (실제 API)', async ({ page }) => {
 })
 ```
 
----
-
 # 8. 고급 테크닉
 
 ## 대기 전략
@@ -544,8 +528,6 @@ test('여러 탭에서 상호작용', async ({ browser }) => {
 })
 ```
 
----
-
 # 9. 설정 및 최적화
 
 ## playwright.config.ts 설정
@@ -610,8 +592,6 @@ export default defineConfig({
 })
 ```
 
----
-
 # 10. CI/CD 통합
 
 ## GitHub Actions
@@ -653,8 +633,6 @@ jobs:
           name: playwright-report
           path: playwright-report/
 ```
-
----
 
 # 11. Best Practices
 
@@ -702,8 +680,6 @@ test('장바구니에 상품이 추가된다') // 좋음
 test('실제 메일을 보낸다') // 나쁨
 test('메일 발송 API가 호출된다') // 좋음
 ```
-
----
 
 # 12. 테스트 조직 구조
 
@@ -764,8 +740,6 @@ test('로그인', async ({ page }) => {
 })
 ```
 
----
-
 # 13. 자주 묻는 질문
 
 ## Q: 얼마나 많은 E2E 테스트가 필요한가?
@@ -809,8 +783,6 @@ const image = page.locator('img')
 await image.click()
 ```
 
----
-
 # 14. 체크리스트
 
 E2E 테스트 시작하기:
@@ -829,8 +801,6 @@ E2E 테스트 시작하기:
 [ ] 팀 협업 규칙 정의
 ```
 
----
-
 # 결론
 
 E2E 테스트는:
@@ -841,3 +811,9 @@ E2E 테스트는:
 ✅ 배포 전 신뢰도 확보
 
 **핵심 사용자 흐름부터 E2E 테스트를 시작하세요!**
+
+## 참고 링크
+
+- [Playwright 공식 사이트](https://playwright.dev)
+- [Cypress 공식 사이트](https://www.cypress.io)
+- [Selenium 공식 사이트](https://www.selenium.dev)
