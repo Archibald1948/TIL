@@ -63,8 +63,6 @@ TypeORM:
 - 성능 낮음
 ```
 
----
-
 # 2. 설치
 
 ## 설치 및 설정
@@ -82,8 +80,6 @@ npm install better-sqlite3  # SQLite
 npm install -D drizzle-kit
 npm install -D @types/pg @types/node
 ```
-
----
 
 # 3. 기본 설정
 
@@ -132,8 +128,6 @@ import Database from 'better-sqlite3';
 const sqlite = new Database(process.env.DATABASE_URL || 'sqlite.db');
 export const db = drizzle(sqlite);
 ```
-
----
 
 # 4. 스키마 정의
 
@@ -199,8 +193,6 @@ type NewUser = typeof users.$inferInsert
 const user: User = { /* ... */ }
 const newUser: NewUser = { /* ... */ }
 ```
-
----
 
 # 5. 기본 쿼리
 
@@ -290,8 +282,6 @@ await db.delete(users).where(eq(users.id, 1));
 await db.delete(users).where(eq(users.isActive, false));
 ```
 
----
-
 # 6. 조건과 필터
 
 ## WHERE 조건
@@ -350,8 +340,6 @@ await db
   .where(or(eq(users.role, 'admin'), eq(users.role, 'moderator')));
 ```
 
----
-
 # 7. 정렬과 제한
 
 ```typescript
@@ -377,8 +365,6 @@ const users = await db
   .limit(pageSize)
   .offset((page - 1) * pageSize);
 ```
-
----
 
 # 8. 조인 (JOIN)
 
@@ -429,8 +415,6 @@ const result = await db
   .leftJoin(posts, eq(users.id, posts.userId))
 ```
 
----
-
 # 9. 집계 함수
 
 ```typescript
@@ -463,8 +447,6 @@ const result = await db
   .groupBy(users.role);
 ```
 
----
-
 # 10. 트랜잭션
 
 ```typescript
@@ -495,8 +477,6 @@ const result = await db.transaction(async (tx) => {
   return { user: newUser[0], post: newPost[0] };
 });
 ```
-
----
 
 # 11. 마이그레이션
 
@@ -544,8 +524,6 @@ CREATE TABLE IF NOT EXISTS "posts" (
   "createdAt" timestamp DEFAULT NOW()
 );
 ```
-
----
 
 # 12. 실전 예제
 
@@ -613,8 +591,6 @@ router.delete('/users/:id', async (req, res) => {
 export default router;
 ```
 
----
-
 # 13. 복잡한 쿼리
 
 ## 서브쿼리
@@ -643,8 +619,6 @@ const result = await db.with(cte).select().from(cte);
 // ...
 ```
 
----
-
 # 14. 타입 안전성
 
 ```typescript
@@ -663,8 +637,6 @@ const users = await db
 // ✅ 성공
 ```
 
----
-
 # 15. 체크리스트
 
 Drizzle ORM 프로젝트 시작하기:
@@ -681,8 +653,6 @@ Drizzle ORM 프로젝트 시작하기:
 [ ] Express와 통합
 ```
 
----
-
 # 결론
 
 Drizzle ORM은:
@@ -694,3 +664,9 @@ Drizzle ORM은:
 ✅ 학습곡선 낮음
 
 **TypeScript 프로젝트의 데이터베이스는 Drizzle ORM으로!**
+
+## 참고 링크
+
+- [Drizzle ORM 공식 사이트](https://orm.drizzle.team)
+- [Drizzle ORM 공식 문서](https://orm.drizzle.team/docs/overview)
+- [Drizzle ORM GitHub](https://github.com/drizzle-team/drizzle-orm)
