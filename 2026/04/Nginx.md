@@ -65,8 +65,6 @@ Apache:
 - 매우 광범위한 모듈
 ```
 
----
-
 # 2. 설치
 
 ## Ubuntu/Debian
@@ -121,8 +119,6 @@ CMD ["nginx", "-g", "daemon off;"]
 docker build -t my-nginx .
 docker run -p 80:80 my-nginx
 ```
-
----
 
 # 3. 기본 설정
 
@@ -186,8 +182,6 @@ http {
   include /etc/nginx/sites-enabled/*;
 }
 ```
-
----
 
 # 4. 가상 호스트 (Virtual Host)
 
@@ -253,8 +247,6 @@ sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
 sudo ln -s /etc/nginx/sites-available/blog.com /etc/nginx/sites-enabled/
 sudo systemctl reload nginx
 ```
-
----
 
 # 5. 리버스 프록시
 
@@ -328,8 +320,6 @@ server {
 }
 ```
 
----
-
 # 6. 로드 밸런싱
 
 ## Upstream 정의
@@ -396,8 +386,6 @@ upstream backend {
 }
 ```
 
----
-
 # 7. SSL/TLS (HTTPS)
 
 ## Let's Encrypt로 인증서 설정
@@ -451,8 +439,6 @@ server {
   return 301 https://$server_name$request_uri;
 }
 ```
-
----
 
 # 8. 캐싱
 
@@ -531,8 +517,6 @@ server {
 }
 ```
 
----
-
 # 9. 보안
 
 ## 기본 보안 설정
@@ -605,8 +589,6 @@ server {
 }
 ```
 
----
-
 # 10. 성능 최적화
 
 ## 기본 최적화
@@ -666,8 +648,6 @@ server {
 }
 ```
 
----
-
 # 11. 모니터링
 
 ## 액세스 로그 분석
@@ -703,8 +683,6 @@ awk '{print $1}' /var/log/nginx/access.log | sort | uniq -c | sort -rn | head -1
 # 느린 요청 찾기
 awk '$NF > 1 {print}' /var/log/nginx/access.log  # 1초 이상
 ```
-
----
 
 # 12. 실전 예제
 
@@ -856,8 +834,6 @@ server {
 }
 ```
 
----
-
 # 13. 문제 해결
 
 ## 설정 검사
@@ -903,8 +879,6 @@ Connection refused
 → 호스트와 포트 확인
 ```
 
----
-
 # 14. 체크리스트
 
 Nginx 설정하기:
@@ -923,8 +897,6 @@ Nginx 설정하기:
 [ ] 모니터링 설정
 ```
 
----
-
 # 결론
 
 Nginx는:
@@ -936,3 +908,9 @@ Nginx는:
 ✅ 대규모 트래픽 처리 가능
 
 **모든 프로덕션 환경에서 Nginx를 사용하세요!**
+
+## 참고 링크
+
+- [Nginx 공식 사이트](https://nginx.org)
+- [Nginx 공식 문서](https://nginx.org/en/docs/)
+- [NGINX 제품 문서](https://docs.nginx.com)
