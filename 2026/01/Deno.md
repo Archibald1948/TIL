@@ -641,3 +641,9 @@ Deno는 **현대 JavaScript 개발의 표준**이 될 것입니다:
 특히 **신규 프로젝트**나 **마이크로서비스**에 강력히 권장됩니다.
 
 Node.js의 한계를 느꼈다면, **지금 바로 Deno로 전환해보세요!**
+
+## 참고 링크
+
+- [Deno 공식 사이트](https://deno.com)
+- [Deno 공식 문서](https://docs.deno.com)
+- [Deno GitHub](https://github.com/denoland/deno)
