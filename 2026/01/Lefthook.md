@@ -702,3 +702,8 @@ Lefthook은:
 - 복잡한 전처리 로직이 필요할 때
 
 지금 바로 Lefthook으로 업그레이드하여 개발 속도를 높여보세요!
+
+## 참고 링크
+
+- [Lefthook 공식 문서](https://lefthook.dev)
+- [Lefthook GitHub](https://github.com/evilmartians/lefthook)
