@@ -49,8 +49,6 @@ https://tanstack.com/query/latest
 ✅ DevTools 제공
 ```
 
----
-
 # 2. 설치 및 기본 설정
 
 ## 설치
@@ -84,8 +82,6 @@ export default function App() {
   )
 }
 ```
-
----
 
 # 3. 기본 사용법
 
@@ -149,8 +145,6 @@ function CreateUser() {
   )
 }
 ```
-
----
 
 # 4. Query Key 전략
 
@@ -216,8 +210,6 @@ queryClient.invalidateQueries({
   queryKey: userKeys.lists()
 })
 ```
-
----
 
 # 5. 고급 기능
 
@@ -335,8 +327,6 @@ function RealtimeData() {
 }
 ```
 
----
-
 # 6. DevTools
 
 ## 설치 및 설정
@@ -368,8 +358,6 @@ export default function App() {
 - 캐시 무효화
 - mutation 추적
 ```
-
----
 
 # 7. 실전 예제
 
@@ -469,8 +457,6 @@ function DashboardPage({ userId }) {
 }
 ```
 
----
-
 # 8. 에러 처리
 
 ## 기본 에러 처리
@@ -525,8 +511,6 @@ function UserList() {
 }
 ```
 
----
-
 # 9. 성능 최적화
 
 ## 쿼리 캐싱 시간 설정
@@ -577,8 +561,6 @@ const { data } = useQuery({
   refetchOnReconnect: false     // 재연결 시 refetch X
 })
 ```
-
----
 
 # 10. 팀 협업 Best Practices
 
@@ -645,8 +627,6 @@ export function useUsers(filters) {
 }
 ```
 
----
-
 # 11. 자주 묻는 질문
 
 ## Q: Redux와 TanStack Query의 차이?
@@ -696,8 +676,6 @@ onError: (err, variables, context) => {
 }
 ```
 
----
-
 # 12. 체크리스트
 
 프로젝트에 TanStack Query 적용:
@@ -715,8 +693,6 @@ onError: (err, variables, context) => {
 [ ] API 클라이언트 분리
 ```
 
----
-
 # 결론
 
 TanStack Query는:
@@ -728,3 +704,9 @@ TanStack Query는:
 ✅ 성능 개선
 
 **React 앱에서 API 데이터는 TanStack Query로 관리하세요!**
+
+## 참고 링크
+
+- [TanStack Query 공식 사이트](https://tanstack.com/query/latest)
+- [TanStack Query 공식 문서](https://tanstack.com/query/latest/docs/framework/react/overview)
+- [TanStack Query GitHub](https://github.com/TanStack/query)
