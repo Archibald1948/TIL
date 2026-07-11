@@ -52,8 +52,6 @@ React-admin = React 기반의 관리자 패널 프레임워크
 ✅ 프로덕션 레벨
 ```
 
----
-
 # 2. 설치
 
 ## 패키지 설치
@@ -72,8 +70,6 @@ npm install ra-data-simple-rest
 npm install ra-data-json-server
 npm install ra-data-graphql-simple
 ```
-
----
 
 # 3. 기본 설정
 
@@ -126,8 +122,6 @@ export default App;
 ```
 
 이것만으로도 완전한 관리자 패널이 만들어집니다!
-
----
 
 # 4. 리스트 뷰 (List View)
 
@@ -214,8 +208,6 @@ export const UserList = () => (
   </List>
 );
 ```
-
----
 
 # 5. 에딧 뷰 (Edit View)
 
@@ -343,8 +335,6 @@ export const UserEdit = () => (
 );
 ```
 
----
-
 # 6. 생성 뷰 (Create View)
 
 ```javascript
@@ -385,8 +375,6 @@ export const UserCreate = () => (
   </Create>
 );
 ```
-
----
 
 # 7. 관계 처리
 
@@ -471,8 +459,6 @@ export const UserEdit = () => (
 );
 ```
 
----
-
 # 8. 권한 관리 (Authorization)
 
 ## 권한 확인
@@ -523,8 +509,6 @@ function App() {
   )
 }
 ```
-
----
 
 # 9. 커스텀 뷰
 
@@ -592,8 +576,6 @@ function App() {
   );
 }
 ```
-
----
 
 # 10. 데이터 제공자 (Data Provider)
 
@@ -685,8 +667,6 @@ const customDataProvider = {
 <Admin dataProvider={customDataProvider} />
 ```
 
----
-
 # 11. 테마 커스터마이징
 
 ```javascript
@@ -719,8 +699,6 @@ function App() {
 }
 ```
 
----
-
 # 12. 다국어 지원 (i18n)
 
 ```javascript
@@ -745,8 +723,6 @@ function App() {
 }
 ```
 
----
-
 # 13. 체크리스트
 
 React-admin 프로젝트 시작하기:
@@ -764,8 +740,6 @@ React-admin 프로젝트 시작하기:
 [ ] 다국어 지원 추가
 ```
 
----
-
 # 결론
 
 React-admin은:
@@ -777,3 +751,9 @@ React-admin은:
 ✅ 프로덕션 준비 완료
 
 **관리자 패널은 React-admin으로 만드세요!**
+
+## 참고 링크
+
+- [React-admin 공식 사이트](https://marmelab.com/react-admin/)
+- [공식 문서(Documentation)](https://marmelab.com/react-admin/documentation.html)
+- [React-admin GitHub](https://github.com/marmelab/react-admin)
