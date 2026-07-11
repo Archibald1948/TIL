@@ -59,8 +59,6 @@ Adopt Prettier and stop debating about style."
 Prettier를 채택하고 스타일 논쟁을 종료하세요.
 ```
 
----
-
 # 2. 설치
 
 ## 설치 방법
@@ -70,8 +68,6 @@ npm install -D prettier
 ```
 
 매우 간단합니다. 의존성도 최소입니다!
-
----
 
 # 3. 설정 파일
 
@@ -192,8 +188,6 @@ tabWidth: 2
 }
 ```
 
----
-
 # 4. .prettierignore 파일
 
 ## 포매팅 제외 파일
@@ -214,8 +208,6 @@ coverage
 src/legacy/**
 public/vendor/
 ```
-
----
 
 # 5. npm 스크립트
 
@@ -249,8 +241,6 @@ npm run format -- src/App.tsx
 # 특정 확장자
 npm run format -- "src/**/*.tsx"
 ```
-
----
 
 # 6. VS Code 통합
 
@@ -304,8 +294,6 @@ VS Code에서 "Prettier - Code formatter" 확장 설치
 
 이제 파일 저장 시 자동으로 완벽하게 포매팅됩니다!
 
----
-
 # 7. 포매팅 예제
 
 ## 실제 변환
@@ -352,8 +340,6 @@ function calculateSomething(parameter1, parameter2, parameter3, parameter4) {
 }
 ```
 
----
-
 # 8. Husky와 통합
 
 ## 자동 포매팅 (커밋 전)
@@ -382,8 +368,6 @@ npx husky add .husky/pre-commit "npx lint-staged"
 git add .
 git commit -m "새 기능"  # 자동으로 Prettier 실행
 ```
-
----
 
 # 9. CI/CD 통합
 
@@ -423,8 +407,6 @@ jobs:
         run: npm run format:check
 ```
 
----
-
 # 10. 플러그인
 
 ## Prettier 플러그인 사용
@@ -450,8 +432,6 @@ npm install -D prettier-plugin-tailwindcss
 // ✅ 포매팅 후
 <div className="flex items-center justify-center bg-red-500 p-4 text-white">
 ```
-
----
 
 # 11. 팀 협업
 
@@ -491,8 +471,6 @@ npm run format:check # 포매팅 확인 (변경 없음)
 - 단일 따옴표 사용
 - 마지막 쉼표 유지 (ES5 호환)
 ```
-
----
 
 # 12. 자주 묻는 질문
 
@@ -541,8 +519,6 @@ npm run format -- "src/**/*.jsx"
 npm install -D eslint-plugin-import
 ```
 
----
-
 # 13. 체크리스트
 
 Prettier 설정하기:
@@ -558,8 +534,6 @@ Prettier 설정하기:
 [ ] 팀 가이드 문서화
 ```
 
----
-
 # 결론
 
 Prettier는:
@@ -571,3 +545,9 @@ Prettier는:
 ✅ 팀 협업 향상
 
 **모든 프로젝트에 Prettier를 사용하세요!**
+
+## 참고 링크
+
+- [Prettier 공식 사이트](https://prettier.io)
+- [옵션(Options) 문서](https://prettier.io/docs/en/options.html)
+- [Prettier GitHub](https://github.com/prettier/prettier)
