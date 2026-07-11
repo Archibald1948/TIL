@@ -584,3 +584,10 @@ Giscus는:
 **특히 기술 블로그나 개발자 커뮤니티에 최적화되어 있습니다.**
 
 **지금 바로 Giscus로 댓글 시스템을 업그레이드하세요!**
+
+## 참고 링크
+
+- [Giscus 공식 사이트](https://giscus.app)
+- [Giscus GitHub 저장소](https://github.com/giscus/giscus)
+- [Giscus GitHub App](https://github.com/apps/giscus)
+- [GitHub Discussions 문서](https://docs.github.com/en/discussions)
