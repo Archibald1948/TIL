@@ -63,8 +63,6 @@ Redux Form:
 - 번들: 큼
 ```
 
----
-
 # 2. 설치 및 기본 설정
 
 ## 설치
@@ -74,8 +72,6 @@ npm install react-hook-form
 ```
 
 매우 간단합니다. 의존성도 최소입니다.
-
----
 
 # 3. 기본 사용법
 
@@ -127,8 +123,6 @@ function SimpleForm() {
 // - onChange 핸들러
 // - 폼 제출 시 값 수집
 ```
-
----
 
 # 4. 검증 (Validation)
 
@@ -308,8 +302,6 @@ function SignupForm() {
 }
 ```
 
----
-
 # 5. TypeScript와 함께 사용
 
 ## 타입 안전 폼
@@ -368,8 +360,6 @@ function TypeSafeForm() {
   )
 }
 ```
-
----
 
 # 6. 동적 필드 (배열)
 
@@ -457,8 +447,6 @@ function DynamicForm() {
   )
 }
 ```
-
----
 
 # 7. watch, getValues, setValue
 
@@ -630,8 +618,6 @@ function SetValueExample() {
   )
 }
 ```
-
----
 
 # 8. 실전 예제
 
@@ -886,8 +872,6 @@ function MultiStepForm() {
 }
 ```
 
----
-
 # 9. 성능 최적화
 
 ## 불필요한 리렌더링 방지
@@ -929,8 +913,6 @@ function PerformanceOptimized() {
   )
 }
 ```
-
----
 
 # 10. 팀 협업 Best Practices
 
@@ -978,8 +960,6 @@ function LoginForm() {
   )
 }
 ```
-
----
 
 # 11. 자주 묻는 질문
 
@@ -1057,8 +1037,6 @@ function Form() {
 }
 ```
 
----
-
 # 12. 체크리스트
 
 React Hook Form 시작하기:
@@ -1075,8 +1053,6 @@ React Hook Form 시작하기:
 [ ] 팀 협업 규칙 정의
 ```
 
----
-
 # 결론
 
 React Hook Form은:
@@ -1088,3 +1064,9 @@ React Hook Form은:
 ✅ 거대한 커뮤니티
 
 **React에서 폼 관리는 React Hook Form으로 시작하세요!**
+
+## 참고 링크
+
+- [React Hook Form 공식 사이트](https://react-hook-form.com)
+- [React Hook Form 공식 문서](https://react-hook-form.com/get-started)
+- [React Hook Form GitHub](https://github.com/react-hook-form/react-hook-form)
