@@ -870,3 +870,8 @@ FSD를 올바르게 적용하면:
 - 기술 부채 관리 용이
 
 **지금 바로 FSD를 도입하고 프론트엔드 개발을 혁신해보세요!**
+
+## 참고 링크
+
+- [Feature-Sliced Design 공식 사이트](https://feature-sliced.design)
+- [Feature-Sliced Design 문서 GitHub](https://github.com/feature-sliced/documentation)
