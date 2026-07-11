@@ -683,3 +683,9 @@ Neon은 PostgreSQL의 미래입니다:
 데이터베이스 인프라가 아닌 비즈니스 로직에 집중할 수 있게 해줍니다.
 
 **Neon으로 지금 바로 시작하세요!**
+
+## 참고 링크
+
+- [Neon 공식 사이트](https://neon.com)
+- [Neon 공식 문서](https://neon.com/docs)
+- [Neon GitHub](https://github.com/neondatabase/neon)
