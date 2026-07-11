@@ -171,7 +171,7 @@ turbo run build --affected
 
 ## 참고 링크
 
-- [Turborepo 공식 문서](https://turborepo.dev/docs)
+- [Turborepo 공식 문서](https://turbo.build/repo/docs)
 - [turbo.json 레퍼런스](https://turbo.build/repo/docs/reference/run)
 - [Vercel Blog - Go → Rust 마이그레이션](https://vercel.com/blog/finishing-turborepos-migration-from-go-to-rust)
 - [Vercel Academy - Production Monorepos](https://vercel.com/academy/production-monorepos/turborepo-basics)
