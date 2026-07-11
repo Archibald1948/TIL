@@ -53,8 +53,6 @@ ESLint = 코드의 문제점을 찾고 수정하는 정적 분석 도구
 ✅ 개발 초보자도 좋은 습관 형성
 ```
 
----
-
 # 2. 설치 및 기본 설정
 
 ## 설치
@@ -85,8 +83,6 @@ npx eslint --init
 ? What format do you like for your config file?
 → JavaScript
 ```
-
----
 
 # 3. 기본 설정 파일
 
@@ -195,8 +191,6 @@ npm install -D eslint-plugin-react eslint-plugin-react-hooks
 npm install -D @typescript-eslint/eslint-plugin @typescript-eslint/parser
 ```
 
----
-
 # 4. 주요 규칙 설명
 
 ## 변수 규칙
@@ -260,8 +254,6 @@ rules: {
 }
 ```
 
----
-
 # 5. npm 스크립트
 
 ## package.json
@@ -288,8 +280,6 @@ npm run lint:fix
 # 감시 모드 (파일 변경 시 자동 실행)
 npm run lint:watch
 ```
-
----
 
 # 6. VS Code 통합
 
@@ -321,8 +311,6 @@ VS Code에서 "ESLint" 확장 설치
 
 이제 파일 저장 시 ESLint 규칙 위반이 자동으로 수정됩니다!
 
----
-
 # 7. 실전 예제
 
 ## 검사 예제
@@ -350,8 +338,6 @@ async function fetchData() {
   await fetch('/api/data');
 }
 ```
-
----
 
 # 8. 커스텀 규칙 예제
 
@@ -389,8 +375,6 @@ module.exports = {
 };
 ```
 
----
-
 # 9. Husky와 통합
 
 ## 커밋 전 자동 린트
@@ -418,8 +402,6 @@ npx husky add .husky/pre-commit "npx lint-staged"
 git add .
 git commit -m "새 기능"  # 자동으로 ESLint 실행
 ```
-
----
 
 # 10. CI/CD 통합
 
@@ -451,8 +433,6 @@ jobs:
       - name: Run ESLint
         run: npm run lint
 ```
-
----
 
 # 11. 자주 묻는 질문
 
@@ -499,8 +479,6 @@ ignorePatterns: [
 ]
 ```
 
----
-
 # 12. 체크리스트
 
 ESLint 설정하기:
@@ -516,8 +494,6 @@ ESLint 설정하기:
 [ ] 팀 규칙 문서화
 ```
 
----
-
 # 결론
 
 ESLint는:
@@ -529,3 +505,10 @@ ESLint는:
 ✅ 초보자 실수 방지
 
 **모든 JavaScript/TypeScript 프로젝트에 필수입니다!**
+
+## 참고 링크
+
+- [ESLint 공식 사이트](https://eslint.org)
+- [ESLint 공식 문서](https://eslint.org/docs/latest/)
+- [규칙(Rules) 레퍼런스](https://eslint.org/docs/latest/rules/)
+- [ESLint GitHub](https://github.com/eslint/eslint)
