@@ -857,3 +857,10 @@ Rust:
    - 취약점 자동 감지
 
 패키지 매니저를 올바르게 사용하면, 의존성 관리의 번거로움을 완전히 제거할 수 있습니다!
+
+## 참고 링크
+
+- [npm 공식 문서](https://docs.npmjs.com/)
+- [pnpm 공식 사이트](https://pnpm.io/)
+- [Yarn 공식 사이트](https://yarnpkg.com/)
+- [Bun 공식 문서](https://bun.sh/docs)
