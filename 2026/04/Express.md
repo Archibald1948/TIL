@@ -68,8 +68,6 @@ Minimal and flexible web application framework.
 개발자가 필요한 것만 선택해서 사용할 수 있다.
 ```
 
----
-
 # 2. 설치 및 기본 설정
 
 ## 설치
@@ -123,8 +121,6 @@ app.listen(PORT, () => {
 npm start      # 일반 실행
 npm run dev    # 개발 모드 (파일 변경 시 자동 재시작)
 ```
-
----
 
 # 3. 라우팅 기초
 
@@ -198,8 +194,6 @@ app.get('/filter', (req, res) => {
   res.send(req.query);
 });
 ```
-
----
 
 # 4. 미들웨어 (Middleware)
 
@@ -296,8 +290,6 @@ app.use((err, req, res, next) => {
 });
 ```
 
----
-
 # 5. 요청/응답 처리
 
 ## 요청 (Request) 객체
@@ -370,8 +362,6 @@ app.get('/', (req, res) => {
   res.render('index', { title: 'Home' });
 });
 ```
-
----
 
 # 6. 실전 예제
 
@@ -498,8 +488,6 @@ app.use('/api/users', userRoutes)
 app.listen(3000)
 ```
 
----
-
 # 7. 템플릿 엔진
 
 ## EJS 사용
@@ -549,8 +537,6 @@ app.listen(3000);
   </body>
 </html>
 ```
-
----
 
 # 8. 인증 (Authentication)
 
@@ -607,8 +593,6 @@ app.get('/api/profile', verifyToken, (req, res) => {
 app.listen(3000);
 ```
 
----
-
 # 9. 정적 파일 서빙
 
 ```javascript
@@ -648,8 +632,6 @@ public/
 <link rel="stylesheet" href="/static/css/style.css">
 ```
 
----
-
 # 10. CORS 설정
 
 ```bash
@@ -685,8 +667,6 @@ app.get('/api/private', (req, res) => {
 
 app.listen(3000);
 ```
-
----
 
 # 11. 에러 처리
 
@@ -737,8 +717,6 @@ app.use((err, req, res, next) => {
 app.listen(3000);
 ```
 
----
-
 # 12. 환경 변수
 
 ```bash
@@ -771,8 +749,6 @@ app.listen(PORT, () => {
 });
 ```
 
----
-
 # 13. 로깅
 
 ## Morgan 미들웨어
@@ -801,8 +777,6 @@ app.use(morgan('combined', { stream: accessLogStream }));
 
 app.listen(3000);
 ```
-
----
 
 # 14. 데이터베이스 연결
 
@@ -856,8 +830,6 @@ app.post('/api/users', async (req, res) => {
 app.listen(3000);
 ```
 
----
-
 # 15. 실행 환경별 설정
 
 ```javascript
@@ -888,8 +860,6 @@ app.set('trust proxy', 1);
 app.listen(process.env.PORT || 3000);
 ```
 
----
-
 # 16. 체크리스트
 
 Express 프로젝트 시작하기:
@@ -909,8 +879,6 @@ Express 프로젝트 시작하기:
 [ ] 프로덕션 배포 설정
 ```
 
----
-
 # 결론
 
 Express는:
@@ -922,3 +890,10 @@ Express는:
 ✅ 빠른 개발 속도
 
 **Node.js 웹 개발의 표준 프레임워크입니다!**
+
+## 참고 링크
+
+- [Express 공식 사이트](https://expressjs.com)
+- [Express 한국어 문서](https://expressjs.com/ko/)
+- [API 레퍼런스](https://expressjs.com/en/4x/api.html)
+- [Express GitHub](https://github.com/expressjs/express)
