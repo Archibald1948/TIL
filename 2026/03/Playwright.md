@@ -22,7 +22,9 @@
 
 **Playwright**는 이 모든 과정을 자동으로 처리합니다. 한 번 자동화 스크립트를 작성하면, 언제든지 반복 실행할 수 있습니다.
 
----
+## 공식 사이트
+
+https://playwright.dev
 
 # 1. Playwright란?
 
@@ -55,8 +57,6 @@ Playwright:
 - 크로스 브라우저 지원
 ```
 
----
-
 # 2. 설치 및 기본 설정
 
 ## 설치
@@ -73,6 +73,7 @@ npm init playwright@latest
 ```
 
 자동으로 다음 파일들이 생성됩니다:
+
 ```
 playwright.config.ts
 tests/
@@ -80,27 +81,25 @@ tests/
   └── ...
 ```
 
----
-
 # 3. 기본 테스트 작성
 
 ## 첫 번째 테스트
 
 ```typescript
 // tests/example.spec.ts
-import { test, expect } from '@playwright/test'
+import { test, expect } from '@playwright/test';
 
 test('기본 테스트', async ({ page }) => {
   // 1. 사이트 방문
-  await page.goto('https://example.com')
+  await page.goto('https://example.com');
 
   // 2. 요소 찾기
-  const heading = page.locator('h1')
+  const heading = page.locator('h1');
 
   // 3. 검증
-  await expect(heading).toBeVisible()
-  await expect(heading).toContainText('Example')
-})
+  await expect(heading).toBeVisible();
+  await expect(heading).toContainText('Example');
+});
 ```
 
 ## 테스트 실행
@@ -122,8 +121,6 @@ npx playwright test --ui
 npx playwright test --debug
 ```
 
----
-
 # 4. 요소 선택 및 상호작용
 
 ## Locator 선택
@@ -131,71 +128,69 @@ npx playwright test --debug
 ```typescript
 test('요소 선택하기', async ({ page }) => {
   // CSS 선택자
-  const button = page.locator('button.submit')
+  const button = page.locator('button.submit');
 
   // XPath
-  const link = page.locator('//a[@class="important"]')
+  const link = page.locator('//a[@class="important"]');
 
   // Text로 찾기
-  const loginButton = page.getByText('로그인')
+  const loginButton = page.getByText('로그인');
 
   // Role로 찾기
-  const input = page.getByRole('textbox', { name: '이메일' })
+  const input = page.getByRole('textbox', { name: '이메일' });
 
   // Label로 찾기
-  const checkbox = page.getByLabel('동의합니다')
+  const checkbox = page.getByLabel('동의합니다');
 
   // Placeholder로 찾기
-  const search = page.getByPlaceholder('검색어를 입력하세요')
-})
+  const search = page.getByPlaceholder('검색어를 입력하세요');
+});
 ```
 
 ## 요소와 상호작용
 
 ```typescript
 test('클릭, 입력, 선택', async ({ page }) => {
-  await page.goto('https://example.com')
+  await page.goto('https://example.com');
 
   // 클릭
-  await page.click('button.submit')
+  await page.click('button.submit');
 
   // 또는
-  await page.locator('button.submit').click()
+  await page.locator('button.submit').click();
 
   // 텍스트 입력
-  await page.fill('input[name="email"]', 'test@example.com')
+  await page.fill('input[name="email"]', 'test@example.com');
 
   // 또는
-  await page.locator('input[name="email"]').fill('test@example.com')
+  await page.locator('input[name="email"]').fill('test@example.com');
 
   // 텍스트 입력 (문자별)
-  await page.type('input[name="password"]', 'password123')
+  await page.type('input[name="password"]', 'password123');
 
   // 체크박스 선택
-  await page.check('input[type="checkbox"]')
+  await page.check('input[type="checkbox"]');
 
   // 라디오 버튼 선택
-  await page.click('input[type="radio"][value="option1"]')
+  await page.click('input[type="radio"][value="option1"]');
 
   // Select 드롭다운
-  await page.selectOption('select', 'value1')
+  await page.selectOption('select', 'value1');
 
   // 키보드 입력
-  await page.press('input', 'Enter')
-  await page.keyboard.type('Hello')
-  await page.keyboard.press('Tab')
+  await page.press('input', 'Enter');
+  await page.keyboard.type('Hello');
+  await page.keyboard.press('Tab');
 
   // 마우스 이동
-  await page.mouse.move(100, 100)
-  await page.mouse.click(100, 100)
-  await page.mouse.dblclick(100, 100)
+  await page.mouse.move(100, 100);
+  await page.mouse.click(100, 100);
+  await page.mouse.dblclick(100, 100);
 
   // 스크롤
-  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight))
-})
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+});
 ```
-
----
 
 # 5. 검증 (Assertion)
 
@@ -203,93 +198,88 @@ test('클릭, 입력, 선택', async ({ page }) => {
 
 ```typescript
 test('요소 검증', async ({ page }) => {
-  await page.goto('https://example.com')
+  await page.goto('https://example.com');
 
-  const button = page.locator('button')
+  const button = page.locator('button');
 
   // 보이는지 확인
-  await expect(button).toBeVisible()
+  await expect(button).toBeVisible();
 
   // 숨겨져 있는지 확인
-  await expect(button).toBeHidden()
+  await expect(button).toBeHidden();
 
   // 활성화된 상태
-  await expect(button).toBeEnabled()
+  await expect(button).toBeEnabled();
 
   // 비활성화된 상태
-  await expect(button).toBeDisabled()
+  await expect(button).toBeDisabled();
 
   // 체크된 상태
-  await expect(page.locator('input[type="checkbox"]')).toBeChecked()
+  await expect(page.locator('input[type="checkbox"]')).toBeChecked();
 
   // 선택된 상태
-  await expect(page.locator('option')).toBeSelected()
+  await expect(page.locator('option')).toBeSelected();
 
   // 포커스된 상태
-  await expect(page.locator('input')).toBeFocused()
-})
+  await expect(page.locator('input')).toBeFocused();
+});
 ```
 
 ## 텍스트 검증
 
 ```typescript
 test('텍스트 검증', async ({ page }) => {
-  await page.goto('https://example.com')
+  await page.goto('https://example.com');
 
-  const heading = page.locator('h1')
+  const heading = page.locator('h1');
 
   // 정확히 일치
-  await expect(heading).toHaveText('Home')
+  await expect(heading).toHaveText('Home');
 
   // 부분 일치
-  await expect(heading).toContainText('Home')
+  await expect(heading).toContainText('Home');
 
   // 대소문자 무시
-  await expect(heading).toContainText(/HOME/i)
-})
+  await expect(heading).toContainText(/HOME/i);
+});
 ```
 
 ## 속성 검증
 
 ```typescript
 test('속성 검증', async ({ page }) => {
-  await page.goto('https://example.com')
+  await page.goto('https://example.com');
 
-  const link = page.locator('a')
+  const link = page.locator('a');
 
   // href 속성
-  await expect(link).toHaveAttribute('href', '/page')
+  await expect(link).toHaveAttribute('href', '/page');
 
   // class 속성
-  await expect(link).toHaveClass('active')
+  await expect(link).toHaveClass('active');
 
   // value 속성
-  await expect(page.locator('input')).toHaveValue('john@example.com')
+  await expect(page.locator('input')).toHaveValue('john@example.com');
 
   // src 속성
-  await expect(page.locator('img')).toHaveAttribute(
-    'src',
-    /image\.png/
-  )
-})
+  await expect(page.locator('img')).toHaveAttribute('src', /image\.png/);
+});
 ```
 
 ## 개수 검증
 
 ```typescript
 test('개수 검증', async ({ page }) => {
-  await page.goto('https://example.com')
+  await page.goto('https://example.com');
 
   // 요소 개수
-  await expect(page.locator('li')).toHaveCount(5)
+  await expect(page.locator('li')).toHaveCount(5);
 
   // 최소/최대
-  const items = page.locator('li')
-  await expect(items).toHaveCount(value => value >= 2)
-})
+  const items = page.locator('li');
+  await expect(items).toHaveCount((value) => value >= 2);
+});
 ```
-
----
 
 # 6. 실전 테스트 시나리오
 
@@ -298,86 +288,84 @@ test('개수 검증', async ({ page }) => {
 ```typescript
 test('사용자 로그인', async ({ page }) => {
   // 로그인 페이지 방문
-  await page.goto('https://example.com/login')
+  await page.goto('https://example.com/login');
 
   // 이메일 입력
-  await page.fill('input[name="email"]', 'test@example.com')
+  await page.fill('input[name="email"]', 'test@example.com');
 
   // 비밀번호 입력
-  await page.fill('input[name="password"]', 'password123')
+  await page.fill('input[name="password"]', 'password123');
 
   // 로그인 버튼 클릭
-  await page.click('button:has-text("로그인")')
+  await page.click('button:has-text("로그인")');
 
   // 로그인 완료 대기
-  await page.waitForURL('/dashboard')
+  await page.waitForURL('/dashboard');
 
   // 대시보드 확인
-  await expect(page.locator('h1')).toContainText('대시보드')
-})
+  await expect(page.locator('h1')).toContainText('대시보드');
+});
 ```
 
 ## 폼 제출 테스트
 
 ```typescript
 test('연락처 폼 제출', async ({ page }) => {
-  await page.goto('https://example.com/contact')
+  await page.goto('https://example.com/contact');
 
   // 폼 작성
-  await page.fill('input[name="name"]', 'John Doe')
-  await page.fill('input[name="email"]', 'john@example.com')
-  await page.fill('textarea[name="message"]', '안녕하세요')
+  await page.fill('input[name="name"]', 'John Doe');
+  await page.fill('input[name="email"]', 'john@example.com');
+  await page.fill('textarea[name="message"]', '안녕하세요');
 
   // 제출 버튼 클릭
-  await page.click('button[type="submit"]')
+  await page.click('button[type="submit"]');
 
   // 성공 메시지 대기
-  await expect(page.locator('.success-message')).toBeVisible()
-  await expect(page.locator('.success-message')).toContainText('감사합니다')
-})
+  await expect(page.locator('.success-message')).toBeVisible();
+  await expect(page.locator('.success-message')).toContainText('감사합니다');
+});
 ```
 
 ## 검색 기능 테스트
 
 ```typescript
 test('상품 검색', async ({ page }) => {
-  await page.goto('https://example.com/shop')
+  await page.goto('https://example.com/shop');
 
   // 검색창에 입력
-  await page.fill('input[placeholder="검색"]', 'iPhone')
+  await page.fill('input[placeholder="검색"]', 'iPhone');
 
   // Enter 키 누르기
-  await page.press('input[placeholder="검색"]', 'Enter')
+  await page.press('input[placeholder="검색"]', 'Enter');
 
   // 검색 결과 로드 대기
-  await page.waitForSelector('.product-item')
+  await page.waitForSelector('.product-item');
 
   // 결과 확인
-  const products = page.locator('.product-item')
-  await expect(products.first()).toContainText('iPhone')
-})
+  const products = page.locator('.product-item');
+  await expect(products.first()).toContainText('iPhone');
+});
 ```
 
 ## 드롭다운 선택 테스트
 
 ```typescript
 test('드롭다운 선택', async ({ page }) => {
-  await page.goto('https://example.com')
+  await page.goto('https://example.com');
 
   // 드롭다운 선택
-  await page.selectOption('select[name="category"]', 'electronics')
+  await page.selectOption('select[name="category"]', 'electronics');
 
   // 선택 확인
-  await expect(
-    page.locator('select[name="category"]')
-  ).toHaveValue('electronics')
+  await expect(page.locator('select[name="category"]')).toHaveValue(
+    'electronics',
+  );
 
   // 또는 getByLabel 사용
-  await page.getByLabel('카테고리').selectOption('electronics')
-})
+  await page.getByLabel('카테고리').selectOption('electronics');
+});
 ```
-
----
 
 # 7. 대기 및 타이밍
 
@@ -385,31 +373,31 @@ test('드롭다운 선택', async ({ page }) => {
 
 ```typescript
 test('대기 처리', async ({ page }) => {
-  await page.goto('https://example.com')
+  await page.goto('https://example.com');
 
   // URL 변경 대기
-  await page.waitForURL('/dashboard')
+  await page.waitForURL('/dashboard');
 
   // 특정 요소 나타날 때까지 대기
-  await page.waitForSelector('.loader', { state: 'hidden' })
+  await page.waitForSelector('.loader', { state: 'hidden' });
 
   // 요소가 보일 때까지 대기
-  await page.waitForSelector('.content', { state: 'visible' })
+  await page.waitForSelector('.content', { state: 'visible' });
 
   // 함수 실행 결과 대기
   await page.waitForFunction(() => {
-    return document.querySelectorAll('.item').length === 10
-  })
+    return document.querySelectorAll('.item').length === 10;
+  });
 
   // 네트워크 요청 완료 대기
-  await page.waitForLoadState('networkidle')
+  await page.waitForLoadState('networkidle');
 
   // 콘텐츠 로드 완료 대기
-  await page.waitForLoadState('domcontentloaded')
+  await page.waitForLoadState('domcontentloaded');
 
   // 전체 로드 완료
-  await page.waitForLoadState('load')
-})
+  await page.waitForLoadState('load');
+});
 ```
 
 ## 타임아웃 설정
@@ -419,17 +407,15 @@ test('타임아웃 설정', async ({ page }) => {
   // 기본 타임아웃: 30초
 
   // 특정 동작의 타임아웃 변경
-  await page.click('button', { timeout: 5000 })
+  await page.click('button', { timeout: 5000 });
 
   // waitFor 타임아웃
-  await page.waitForSelector('.item', { timeout: 10000 })
+  await page.waitForSelector('.item', { timeout: 10000 });
 
   // 전역 타임아웃 설정
-  page.setDefaultTimeout(60000)
-})
+  page.setDefaultTimeout(60000);
+});
 ```
-
----
 
 # 8. 멀티 페이지 및 팝업
 
@@ -437,21 +423,21 @@ test('타임아웃 설정', async ({ page }) => {
 
 ```typescript
 test('새 탭 열기', async ({ browser }) => {
-  const page1 = await browser.newPage()
-  await page1.goto('https://example.com')
+  const page1 = await browser.newPage();
+  await page1.goto('https://example.com');
 
   // 링크 클릭으로 새 탭 열기
   const [popup] = await Promise.all([
     page1.waitForEvent('popup'),
-    page1.click('a[target="_blank"]')
-  ])
+    page1.click('a[target="_blank"]'),
+  ]);
 
   // 새 탭의 내용 확인
-  await expect(popup.locator('h1')).toContainText('새 페이지')
+  await expect(popup.locator('h1')).toContainText('새 페이지');
 
-  await page1.close()
-  await popup.close()
-})
+  await page1.close();
+  await popup.close();
+});
 ```
 
 ## Context 사용
@@ -459,23 +445,21 @@ test('새 탭 열기', async ({ browser }) => {
 ```typescript
 test('여러 브라우저 컨텍스트', async ({ browser }) => {
   // 컨텍스트 1: 로그인한 사용자
-  const context1 = await browser.newContext()
-  const page1 = await context1.newPage()
-  await page1.goto('https://example.com/login')
+  const context1 = await browser.newContext();
+  const page1 = await context1.newPage();
+  await page1.goto('https://example.com/login');
   // 로그인 처리...
 
   // 컨텍스트 2: 로그아웃한 사용자
-  const context2 = await browser.newContext()
-  const page2 = await context2.newPage()
-  await page2.goto('https://example.com')
+  const context2 = await browser.newContext();
+  const page2 = await context2.newPage();
+  await page2.goto('https://example.com');
   // 비로그인 사용자 확인...
 
-  await context1.close()
-  await context2.close()
-})
+  await context1.close();
+  await context2.close();
+});
 ```
-
----
 
 # 9. 스크린샷 및 비디오
 
@@ -483,21 +467,21 @@ test('여러 브라우저 컨텍스트', async ({ browser }) => {
 
 ```typescript
 test('스크린샷 촬영', async ({ page }) => {
-  await page.goto('https://example.com')
+  await page.goto('https://example.com');
 
   // 전체 페이지 스크린샷
-  await page.screenshot({ path: 'screenshot.png' })
+  await page.screenshot({ path: 'screenshot.png' });
 
   // 특정 요소만
-  const button = page.locator('button')
-  await button.screenshot({ path: 'button.png' })
+  const button = page.locator('button');
+  await button.screenshot({ path: 'button.png' });
 
   // 전체 페이지 (스크롤 포함)
   await page.screenshot({
     path: 'full-page.png',
-    fullPage: true
-  })
-})
+    fullPage: true,
+  });
+});
 ```
 
 ## 비디오 녹화
@@ -522,14 +506,12 @@ npx playwright test
 npx playwright show-report
 ```
 
----
-
 # 10. 설정 및 Fixture
 
 ## playwright.config.ts
 
 ```typescript
-import { defineConfig, devices } from '@playwright/test'
+import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
@@ -542,139 +524,135 @@ export default defineConfig({
     baseURL: 'http://localhost:3000',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
-    video: 'retain-on-failure'
+    video: 'retain-on-failure',
   },
 
   // 브라우저 설정
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] }
+      use: { ...devices['Desktop Chrome'] },
     },
     {
       name: 'firefox',
-      use: { ...devices['Desktop Firefox'] }
+      use: { ...devices['Desktop Firefox'] },
     },
     {
       name: 'webkit',
-      use: { ...devices['Desktop Safari'] }
+      use: { ...devices['Desktop Safari'] },
     },
     {
       name: 'Mobile Chrome',
-      use: { ...devices['Pixel 5'] }
-    }
+      use: { ...devices['Pixel 5'] },
+    },
   ],
 
   // 로컬 서버 실행
   webServer: {
     command: 'npm run dev',
     url: 'http://localhost:3000',
-    reuseExistingServer: !process.env.CI
-  }
-})
+    reuseExistingServer: !process.env.CI,
+  },
+});
 ```
 
 ## Fixture 작성
 
 ```typescript
 // tests/fixtures.ts
-import { test as base } from '@playwright/test'
+import { test as base } from '@playwright/test';
 
 type TestFixtures = {
-  authenticatedPage: Page
-}
+  authenticatedPage: Page;
+};
 
 export const test = base.extend<TestFixtures>({
   authenticatedPage: async ({ page }, use) => {
     // 로그인 처리
-    await page.goto('https://example.com/login')
-    await page.fill('input[name="email"]', 'test@example.com')
-    await page.fill('input[name="password"]', 'password123')
-    await page.click('button:has-text("로그인")')
-    await page.waitForURL('/dashboard')
+    await page.goto('https://example.com/login');
+    await page.fill('input[name="email"]', 'test@example.com');
+    await page.fill('input[name="password"]', 'password123');
+    await page.click('button:has-text("로그인")');
+    await page.waitForURL('/dashboard');
 
     // 테스트에서 사용
-    await use(page)
+    await use(page);
 
     // 정리
     // (필요시)
-  }
-})
+  },
+});
 
 // 사용
 test('인증된 사용자 테스트', async ({ authenticatedPage }) => {
-  await authenticatedPage.goto('/profile')
-  await expect(authenticatedPage.locator('h1')).toContainText('프로필')
-})
+  await authenticatedPage.goto('/profile');
+  await expect(authenticatedPage.locator('h1')).toContainText('프로필');
+});
 ```
-
----
 
 # 11. 웹 스크래핑
 
 ## 웹사이트 데이터 추출
 
 ```typescript
-import { chromium } from 'playwright'
+import { chromium } from 'playwright';
 
 async function scrapeNews() {
-  const browser = await chromium.launch()
-  const page = await browser.newPage()
+  const browser = await chromium.launch();
+  const page = await browser.newPage();
 
-  await page.goto('https://news.example.com')
+  await page.goto('https://news.example.com');
 
   // 모든 뉴스 제목 추출
-  const headlines = await page.locator('h2').allTextContents()
+  const headlines = await page.locator('h2').allTextContents();
 
   // 각 기사의 링크와 제목
   const articles = await page.locator('.article').evaluateAll((elements) =>
     elements.map((el) => ({
       title: el.querySelector('h2')?.textContent,
       link: el.querySelector('a')?.getAttribute('href'),
-      date: el.querySelector('.date')?.textContent
-    }))
-  )
+      date: el.querySelector('.date')?.textContent,
+    })),
+  );
 
-  console.log(articles)
+  console.log(articles);
 
-  await browser.close()
+  await browser.close();
 }
 
-scrapeNews()
+scrapeNews();
 ```
 
 ## 동적 콘텐츠 스크래핑
 
 ```typescript
-import { chromium } from 'playwright'
+import { chromium } from 'playwright';
 
 async function scrapeWithJavaScript() {
-  const browser = await chromium.launch()
-  const page = await browser.newPage()
+  const browser = await chromium.launch();
+  const page = await browser.newPage();
 
-  await page.goto('https://example.com')
+  await page.goto('https://example.com');
 
   // 모든 데이터 로드될 때까지 대기
-  await page.waitForLoadState('networkidle')
+  await page.waitForLoadState('networkidle');
 
   // JavaScript 실행 후 데이터 추출
   const data = await page.evaluate(() => {
     return Array.from(document.querySelectorAll('.item')).map((item) => ({
       title: item.querySelector('.title')?.textContent,
       price: item.querySelector('.price')?.textContent,
-      rating: item.querySelector('.rating')?.textContent
-    }))
-  })
+      rating: item.querySelector('.rating')?.textContent,
+    }));
+  });
 
-  console.log(data)
+  console.log(data);
 
-  await browser.close()
+  await browser.close();
 }
 
-scrapeWithJavaScript()
+scrapeWithJavaScript();
 ```
-
----
 
 # 12. 팀 협업 Best Practices
 
@@ -704,34 +682,32 @@ export class LoginPage {
   constructor(private page) {}
 
   async goto() {
-    await this.page.goto('/login')
+    await this.page.goto('/login');
   }
 
   async login(email: string, password: string) {
-    await this.page.fill('input[name="email"]', email)
-    await this.page.fill('input[name="password"]', password)
-    await this.page.click('button[type="submit"]')
+    await this.page.fill('input[name="email"]', email);
+    await this.page.fill('input[name="password"]', password);
+    await this.page.click('button[type="submit"]');
   }
 
   async isLoggedIn() {
-    return await this.page.locator('.user-menu').isVisible()
+    return await this.page.locator('.user-menu').isVisible();
   }
 }
 
 // tests/login.spec.ts
-import { LoginPage } from '../pages/LoginPage'
+import { LoginPage } from '../pages/LoginPage';
 
 test('로그인', async ({ page }) => {
-  const loginPage = new LoginPage(page)
+  const loginPage = new LoginPage(page);
 
-  await loginPage.goto()
-  await loginPage.login('test@example.com', 'password123')
+  await loginPage.goto();
+  await loginPage.login('test@example.com', 'password123');
 
-  expect(await loginPage.isLoggedIn()).toBe(true)
-})
+  expect(await loginPage.isLoggedIn()).toBe(true);
+});
 ```
-
----
 
 # 13. CI/CD 통합
 
@@ -776,13 +752,12 @@ jobs:
           retention-days: 30
 ```
 
----
-
 # 14. 자주 묻는 질문
 
 ## Q: Playwright vs Cypress?
 
 **A:**
+
 ```
 Playwright:
 - 여러 브라우저 지원
@@ -800,29 +775,29 @@ Cypress:
 ## Q: 페이지 로드를 어떻게 기다리나?
 
 **A:**
+
 ```typescript
 // 방법 1: waitForLoadState
-await page.waitForLoadState('networkidle')
+await page.waitForLoadState('networkidle');
 
 // 방법 2: 특정 요소 대기
-await page.waitForSelector('.content')
+await page.waitForSelector('.content');
 
 // 방법 3: URL 변경 대기
-await page.waitForURL('/dashboard')
+await page.waitForURL('/dashboard');
 ```
 
 ## Q: 동적 콘텐츠를 스크래핑하려면?
 
 **A:**
+
 ```typescript
-await page.waitForLoadState('networkidle')
+await page.waitForLoadState('networkidle');
 const data = await page.evaluate(() => {
   // JavaScript로 데이터 추출
-  return document.body.innerText
-})
+  return document.body.innerText;
+});
 ```
-
----
 
 # 15. 체크리스트
 
@@ -841,8 +816,6 @@ Playwright 프로젝트 시작:
 [ ] 팀 협업 규칙 정의
 ```
 
----
-
 # 결론
 
 Playwright는:
@@ -854,3 +827,9 @@ Playwright는:
 ✅ 빠른 실행 속도
 
 **E2E 테스트가 필요하면 Playwright를 선택하세요!**
+
+## 참고 링크
+
+- [Playwright 공식 사이트](https://playwright.dev)
+- [Playwright 공식 문서](https://playwright.dev/docs/intro)
+- [Playwright GitHub](https://github.com/microsoft/playwright)
