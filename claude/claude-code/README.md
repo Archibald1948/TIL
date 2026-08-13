@@ -6,7 +6,7 @@
 
 - **에이전트형 작업** — 단순 자동완성이 아니라 "기능 추가해줘" 수준의 작업을 파일 탐색 → 수정 → 테스트까지 알아서 수행
 - **CLAUDE.md** — 프로젝트 규칙·컨텍스트를 적어두는 메모리 파일. 매 세션 자동으로 읽어 들임
-- **Slash 커맨드 / Skills** — `/init`, `/review` 등 내장 명령 + 커스텀 스킬로 반복 작업 정의
+- **Slash 커맨드 / Skills** — `/init`, `/review` 등 내장 명령 + 커스텀 스킬로 반복 작업 정의 [커맨드 모음](https://code.claude.com/docs/ko/commands)
 - **MCP** — Figma, Gmail, DB 등 외부 도구를 표준 프로토콜로 연결
 - **Hooks / 권한 모드** — 도구 호출 가로채기, 자동 실행 허용 범위 제어
 - **실행 환경** — CLI, VS Code/JetBrains 확장, 데스크톱·웹 앱
