@@ -10,8 +10,6 @@
 - **commitlint**: 커밋 메시지가 컨벤션(여기서는 [Conventional Commits](https://www.conventionalcommits.org/))을 따르는지 검사
 - 두 개를 합치면 → `commit-msg` hook에서 컨벤션을 어긴 커밋을 **차단**
 
----
-
 ## 1. 사전 준비
 
 이 저장소는 원래 순수 마크다운 모음이라 `package.json`이 없었다.
@@ -26,8 +24,6 @@ npm init -y
 
 `package.json`이 생기면 준비 끝.
 
----
-
 ## 2. husky와 commitlint 설치
 
 devDependency로 세 개를 한 번에 설치한다.
@@ -41,8 +37,6 @@ npm install --save-dev husky @commitlint/cli @commitlint/config-conventional
 | `husky` | Git hook 설정 자동화 |
 | `@commitlint/cli` | 커밋 메시지를 검사하는 CLI |
 | `@commitlint/config-conventional` | Conventional Commits 규칙 프리셋 |
-
----
 
 ## 3. husky 초기화
 
@@ -59,8 +53,6 @@ npx husky init
 `prepare` 스크립트 덕분에 나중에 누군가 이 저장소를 클론하고 `npm install`만 해도
 hook이 자동으로 활성화된다. 직접 등록할 필요가 없어 편하다.
 
----
-
 ## 4. 필요 없는 hook 정리
 
 이번 목표는 **커밋 컨벤션 검증만** 붙이는 것이라
@@ -72,8 +64,6 @@ rm .husky/pre-commit
 
 > lint-staged 같은 걸 추가로 도입할 계획이 있다면 남겨둬도 되지만,
 > "딱 필요한 것만"이라는 원칙에 맞춰 일단 제거했다.
-
----
 
 ## 5. `commit-msg` hook 작성
 
@@ -94,8 +84,6 @@ npx --no -- commitlint --edit "$1"
 ```bash
 chmod +x .husky/commit-msg
 ```
-
----
 
 ## 6. commitlint 규칙 정의 — `commitlint.config.js`
 
@@ -141,8 +129,6 @@ module.exports = {
 - 제목 대소문자 규칙은 **비활성화** (한글 메시지를 자주 쓰기 때문)
 - 제목과 타입은 비어 있으면 안 됨
 
----
-
 ## 7. 동작 확인
 
 설정이 끝났으면 commitlint를 직접 호출해서 검증한다.
@@ -166,8 +152,6 @@ git commit -m "오늘 한 거"
 git commit -m "chore: add husky and commitlint"
 # → 통과
 ```
-
----
 
 ## 8. Conventional Commits 치트시트
 
@@ -195,8 +179,6 @@ git commit -m "chore: add husky and commitlint"
 ```
 
 예: `docs(react): hooks 정리 추가`
-
----
 
 ## 9. 정리
 
