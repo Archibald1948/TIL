@@ -17,21 +17,12 @@ TIL을 통해 깃허브 잔디가 채워지길 기대합니다.
 
 ### 주제별
 
-- [BaaS](./BaaS)
-- [claude](./claude)
-- [cs](./cs)
-- [docker](./docker)
-- [emotion](./emotion)
-- [git](./git)
-- [go](./go)
-- [next](./next)
-- [rails](./rails)
-- [react](./react)
-- [rust](./rust)
-- [tailwind](./tailwind)
-- [toss-ff](./toss-ff)
-- [typescript](./typescript)
-- [웹 해킹](./웹%20해킹)
+| 주제별 | 테이블 | 표로  | 나열 |
+|---|---|---|---|
+| [BaaS](./BaaS) | [claude](./claude) | [cs](./cs) | [docker](./docker) |
+| [emotion](./emotion) | [git](./git) | [go](./go) | [next](./next) |
+| [rails](./rails) | [react](./react) | [rust](./rust) | [tailwind](./tailwind) |
+| [toss-ff](./toss-ff) | [typescript](./typescript) | [웹 해킹](./웹%20해킹) |  |
 
 ## 템플릿
 
